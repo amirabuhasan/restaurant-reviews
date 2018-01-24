@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-review",
+  "version": "1.0.0",
+  "description": "--- #### _Three Stage Course Material Project - Restaurant Reviews_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udacity/mws-restaurant-stage-1.git"
+  },
+  "author": "amirabuhasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udacity/mws-restaurant-stage-1/issues"
+  },
+  "homepage": "https://github.com/udacity/mws-restaurant-stage-1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-connect": "^5.2.0"
+  }
+}
