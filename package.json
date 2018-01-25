@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/udacity/mws-restaurant-stage-1#readme",
   "devDependencies": {
+    "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-connect": "^5.2.0"

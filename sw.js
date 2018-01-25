@@ -1,8 +1,10 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v17';
 var urlsToCache = [
   '/',
   '/css/styles.css',
-  '/js/main.js'
+  '/js/main.js',
+  '/js/restaurant_info.js',
+  './restaurant.html'
 ];
 
 self.addEventListener('install', function(event) {
@@ -16,6 +18,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
+
 self.addEventListener("fetch", function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -24,5 +27,3 @@ self.addEventListener("fetch", function(event) {
     })
   )
 })
-
-//testksnfksd
