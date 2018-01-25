@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v17';
+var CACHE_NAME = 'my-site-cache-v51';
 var urlsToCache = [
   '/',
   '/css/styles.css',
@@ -15,6 +15,29 @@ self.addEventListener('install', function(event) {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
+  );
+});
+
+// self.addEventListener("activate", function(event) {
+//   event.waitUntil(
+//     caches.delete("my-site-cache-v21")
+//   );
+// });
+
+
+
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith("my-site-") &&
+            cacheName != CACHE_NAME;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
   );
 });
 

@@ -392,7 +392,7 @@ nav h1 a {
 }
 
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
+/*  GO FULL WIDTH BELOW 768 PIXELS */
 @media only screen and (max-width: 768px) {
 	.restaurants-list {
 		grid-template-columns: 1fr;
