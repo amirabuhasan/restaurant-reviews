@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v51';
+var CACHE_NAME = 'my-site-cache-v67';
 var urlsToCache = [
   '/',
   '/css/styles.css',

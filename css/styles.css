@@ -174,6 +174,9 @@ nav h1 a {
   text-align: center;
 	padding: 20px;
 	font-size: 0;
+  max-width: 73.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .restaurants-list {
@@ -182,11 +185,14 @@ nav h1 a {
 	grid-gap: 20px;
 }
 
+#restaurants-list li {
+  width: 100%;
+}
+
 #restaurants-list .restaurant-info {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  height: 500px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -206,21 +212,18 @@ nav h1 a {
 #restaurants-list p {
   margin: 2px;
   font-size: 11pt;
-
 }
 #restaurants-list li a {
-	/*-webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;*/
 	display: inline-block;
 	bottom: 0;
-  background-color: orange !important;
+  background-color: orange;
   color: #fff;
   font-size: 10pt;
   padding: 5px 30px 5px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  margin: 20px;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -393,7 +396,7 @@ nav h1 a {
 
 
 /*  GO FULL WIDTH BELOW 768 PIXELS */
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
 	.restaurants-list {
 		grid-template-columns: 1fr;
 	}
@@ -403,4 +406,38 @@ nav h1 a {
 	.inside #restaurant-container {
 		width: 100%;
 	}
+}*/
+
+/*@media all and (max-width: 1690px) { ... }*/
+/*@media all and (max-width: 1280px) {
+  .restaurants-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}*/
+@media all and (max-width: 980px) {
+  .restaurants-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 736px) {
+  .restaurants-list {
+    grid-template-columns: 1fr;
+  }
+  .inside #reviews-list {
+    grid-template-columns: 1fr;
+  }
+  .inside #restaurant-container {
+    width: 100%;
+  }
+}
+@media all and (max-width: 480px) {
+  .restaurants-list {
+    grid-template-columns: 1fr;
+  }
+  .inside #reviews-list {
+    grid-template-columns: 1fr;
+  }
+  .inside #restaurant-container {
+    width: 100%;
+  }
 }
