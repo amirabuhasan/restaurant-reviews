@@ -1,9 +1,9 @@
-var CACHE_NAME = 'my-site-cache-v67';
+var CACHE_NAME = 'my-site-cache-v68';
 var urlsToCache = [
-  '/',
-  '/css/styles.css',
-  '/js/main.js',
-  '/js/restaurant_info.js',
+  './',
+  './css/styles.css',
+  './js/main.js',
+  './js/restaurant_info.js',
   './restaurant.html'
 ];
 
