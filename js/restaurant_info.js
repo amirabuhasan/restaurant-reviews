@@ -58,7 +58,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "A photo from the " + restaurant.name + " restaurant.";
+  image.alt = 'A photo from the ' + restaurant.name + ' restaurant.';
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -119,29 +119,29 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('div');
   const name = document.createElement('p');
-  const reviewHeader = document.createElement("div");
-  reviewHeader.classList.add("review-header");
+  const reviewHeader = document.createElement('div');
+  reviewHeader.classList.add('review-header');
   name.innerHTML = review.name;
-  name.classList.add("review-name");
+  name.classList.add('review-name');
   reviewHeader.appendChild(name);
-  li.classList.add("individual-review");
+  li.classList.add('individual-review');
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  date.classList.add("review-date");
+  date.classList.add('review-date');
   reviewHeader.appendChild(date);
   li.appendChild(reviewHeader);
 
   const rating = document.createElement('span');
-  const ratingContainer = document.createElement("div");
-  ratingContainer.classList.add("rating-container");
+  const ratingContainer = document.createElement('div');
+  ratingContainer.classList.add('rating-container');
   rating.innerHTML = `Rating: ${review.rating}`;
   ratingContainer.appendChild(rating);
   li.appendChild(ratingContainer);
 
   const comments = document.createElement('p');
-  const commentsContainer = document.createElement("div");
-  commentsContainer.classList.add("comments-container");
+  const commentsContainer = document.createElement('div');
+  commentsContainer.classList.add('comments-container');
   comments.innerHTML = review.comments;
   commentsContainer.appendChild(comments);
   li.appendChild(commentsContainer);
@@ -175,7 +175,7 @@ getParameterByName = (name, url) => {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-// Add service worker
+// Registering service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {

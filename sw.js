@@ -26,12 +26,12 @@ self.addEventListener('install', function(event) {
 
 
 
-self.addEventListener("activate", function(event) {
+self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          return cacheName.startsWith("my-site-") &&
+          return cacheName.startsWith('my-site-') &&
             cacheName != CACHE_NAME;
         }).map(function(cacheName) {
           return caches.delete(cacheName);
@@ -42,7 +42,7 @@ self.addEventListener("activate", function(event) {
 });
 
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
       if (response) return response;

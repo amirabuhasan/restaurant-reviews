@@ -137,7 +137,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.classList.add("restaurant-info");
+  li.classList.add('restaurant-info');
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
@@ -146,7 +146,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "A photo from the " + restaurant.name + " restaurant.";
+  image.alt = 'A photo from the ' + restaurant.name + ' restaurant.';
   li.append(image);
 
   const neighborhood = document.createElement('p');
@@ -180,7 +180,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 }
 
-// Add service worker
+// Registering service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
