@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 	grid-template-columns: 1fr;
 	grid-template-areas:
 	"map-container"
-	"filter-options"
+  "filter-options"
 	"restaurants-list";
 	grid-gap: 20px;
 }
@@ -275,7 +275,7 @@ nav h1 a {
 }
 .inside #reviews-list {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
 .inside #footer {
